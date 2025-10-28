@@ -1,0 +1,108 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f8fa;
+      padding-top: 70px; 
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: white;
+      color: #333;
+      text-align: center;
+      line-height: 35px;
+      font-size: 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    /* Product card */
+    .product-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(40, 60, 120, 0.07);
+      width: 250px;
+      padding: 18px 18px 22px 18px;
+      text-align: center;
+      transition: transform 0.15s;
+    }
+    .product-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(30,50,110,0.18);
+    }
+    .product-card img {
+      width: 90px;
+      height: 155px;
+      margin: 15px 0;
+      object-fit: contain;
+    }
+    .product-card h2 {
+      margin: 12px 0 8px 0;
+      font-size: 1.1rem;
+      color: #29354d;
+      font-weight: 500;
+    }
+   
+    .product-card button {
+      cursor: pointer;
+      background: #ff9933;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      padding: 10px 24px;
+      margin-top: 14px;
+      transition: background 0.15s;
+    }
+    .product-card button:hover {
+      background: #d88222;
+    }
+    /* Popup card */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.22);
+      z-index: 2000;
+      display: none;
+    }
+    .popup-card {
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 320px;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 32px rgba(10,20,55,0.16);
+      text-align: center;
+      padding: 32px 22px 20px;
+      z-index: 2001;
+      display: none;
+    }
+    .popup-card img {
+      width: 80px;
+      height: 140px;
+      object-fit: contain;
+    }
+    .popup-card button {
+      background: #232f3e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 18px;
+      padding: 8px 28px;
+      cursor: pointer;
+    }

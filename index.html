@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed header & Popup card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+   <div>
+    <ul style="list-style:none; display:inline-flex; gap:38px; margin-left:280px; float:left; font-size:18px;">
+      <li><img width="25" height="25" src="https://img.icons8.com/ios-filled/50/mac-os.png" alt="mac-os"/></li>
+      <li><a href="Store">Store</a></li>
+      <li><a href="Mac">Mac</a></li>
+      <li><a href="ipad">ipad</a></li>
+      <li><a href="iphone">iphone</a></li>
+      <li><a href="Watch">Watch</a></li>
+      <li><a href="Tv & Home">Tv & Home</a></li>
+      <li><a href="Entertainment">Entertainment</a></li>
+      <li><a href="Accessories">Accessories</a></li>
+      <li><a href="Support">Support</a></li>
+      <li><img width="25" height="25" src="https://img.icons8.com/ios-glyphs/120/search--v1.png" alt="search--v1"/></li>
+      <li><img width="25" height="25" src="https://img.icons8.com/pastel-glyph/64/paper-bag--v2.png" alt="paper-bag--v2"/></li>
+    </ul>
+  </div>
+   </header>
+  <div style="text-align:center; margin-top:10px; font-size:19px; color:#555;">
+   <span>Get up to ₹5000 instant cashback on iPhone with eligible cards. Plus up to 6 months of No Cost EMI.‡<a href="#"> Shop iPhone</a> 
+   </span>
+  </div>
+  <div style="margin-left: 150px; font-size:35px; background-color: white;">
+    <h1>iPhone</h1>
+  </div>
+  
+  <div class="container">
+    <div class="product-card">
+      <img src="https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_17pro__d60uog2c064i_large_2x.png">
+      <h2>iPhone 17 Pro</h2>
+      <div style="color: red;">New</div>
+      <button onclick="showPopup('iPhone 17 Pro', ' ₹134900.00', 'https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_17pro__d60uog2c064i_large_2x.png')">View Details</button>
+    </div>
+    <div class="product-card">
+      <img src="https://www.apple.com/v/iphone/home/ce/images/overview/chapternav/nav_iphone_air__bbj6j2c39efm_large_2x.png" alt="Mobile 2">
+      <h2>iPhone Air</h2>
+      <div style="color: red;">New</div>
+      <button onclick="showPopup('iPhone Air','₹109900.00', 'https://www.apple.com/v/iphone/home/ce/images/overview/chapternav/nav_iphone_air__bbj6j2c39efm_large_2x.png')">View Details</button>
+    </div>
+    <div class="product-card">
+      <img src="https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_17__ffxyxejeezqm_large_2x.png" alt="Mobile 3">
+      <h2>iPhone 17</h2>
+      <div style="color:red;">New</div>
+      <button onclick="showPopup('iPhone 17', ' ₹134900.00', 'https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_17__ffxyxejeezqm_large_2x.png')">View Details</button>
+    </div>
+    <div class="product-card">
+      <img src="https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_16__kcscr25z9num_large_2x.png" alt="Mobile 4">
+      <h2>iPhone 16</h2>
+      <button onclick="showPopup('iPhone 16', ' ₹134900.00', 'https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_16__kcscr25z9num_large_2x.png')">View Details</button>
+    </div>
+    <div class="product-card">
+      <img src="https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_16e__3qxl86zrk0yq_large_2x.png" alt="Mobile 5">
+      <h2>iPhone 16e</h2>
+      <button onclick="showPopup('iPhone 16e', ' ₹59900.00', 'https://www.apple.com/in/iphone/home/images/overview/chapternav/nav_iphone_16e__3qxl86zrk0yq_large_2x.png')">View Details</button>
+    </div>
+  </div>
+
+  <div class="overlay" id="popupOverlay" onclick="hidePopup()"></div>
+  <div class="popup-card" id="popupCard">
+    <img id="popupImg" src="" alt="Mobile">
+    <h2 id="popupTitle"></h2>
+    <div class="price" id="popupPrice"></div>
+    <button onclick="hidePopup()">Close</button>
+  </div>
+
+
+  <footer>
+    <div style="text-align:center; padding:20px; background:#fafafc; margin-top:30px; box-shadow: 0 -2px 12px rgba(0,0,0,0.13);">
+      &copy; 2024 Mobile Shop. All rights reserved.
+    </div>
+  </footer>
+ <script src="script.js"></script>
+</body>
+</html>
